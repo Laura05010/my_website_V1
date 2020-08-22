@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  html{
+    scroll-behavior:smooth;
+  }
+  
+  .html{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .container{
+    padding: 0 100px 100px;
+  }
+  
+  .main-info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px;
+  }
+  
+  nav{
+    background:#48CFAD;
+    height: 80px;
+    width: 100%;
+  }
+  
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 90px;
+    font-weight:600;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 60px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 6px;
+  }
+  
+  nav ul li a{
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 7 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a.active, nav ul li a:hover{
+    background: #8769D9;
+    transition: .5s;
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  
+  body{
+    background-color:#eee;
+  }
+  
+  .text p,
+  .about h1,
+  .skills h1,
+  .work h1,
+  .contact h1{
+    color: #707070;
+  }
+  
+  .text{
+    display: flex;
+    flex-direction: column; 
+  /*puts the children in a column */
+    justify-content: center;
+    /* font-size: calc(2.5rem + 1vh); */
+    min-width:250px;
+    /* margin-top: 120px; */
+  }
+  
+  .text h1{
+    min-width:250px;
+    color:#8a8a8a;
+    font-size: calc(2.8rem + 1vh);
+    cursor: context-menu;
+  }
+  
+  @keyframes animate
+  {
+    0%{
+      transform: translateY(0px);
+    }
+    20%{
+      transform: translateY(-20px);
+    }
+    40%, 100%{
+      transform: translateY(0px);
+    }
+  }
+  
+  .text span{
+    display: inline-block;
+  }
+  
+  /* makes the letters jump :) */
+  span:hover{
+    color:#8769D9;
+    transition: all .01s;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1 * var(--i));
+  }
+  
+  span.name{
+    color: #48CFAD;
+  }
+  
+  span.m.left{
+    margin-left: -10px;
+  }
+  
+  .contact-intro{
+    color:#707070;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    padding-left:17px;
+  }
+  
+  .text p{
+    min-width: 30%;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    font-size: .8rem ;
+    padding-bottom:50px;
+  }
+  
+  
+  .text a{
+    text-decoration: none;
+    font-size: .9rem ;
+    text-transform: uppercase;
+    position: relative;
+    /* top: 80px; */
+    /* bottom: 50%; */
+    /* transform: translateY(-50%); */
+    width: 40%;
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid #48CFAD;
+    color:#48CFAD;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+  }
+  
+  
+  .text a:hover{
+    color:#fff;
+  }
+  
+  .text a::before{
+    content: '';
+    background-color: #48CFAD;
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height:0%;
+    z-index: -1;
+    transition: .5s;
+  }
+  
+  .text a:hover::before{
+    height:100%;
+  }
+  /*About me collage */
+  
+  .img-1 {
+    grid-area: img-1;
+    background-image: url(aboutImages/img1.jpg);
+  }
+  
+  .img-2 {
+    grid-area: img-2;
+    background-image: url(aboutImages/img2.png);
+  }
+  
+  .img-3 {
+    grid-area: img-3;
+    background-image: url(aboutImages/img3.jpg);
+  }
+  
+  .img-4 {
+    grid-area: img-4;
+    background-image: url(aboutImages/img4.png);
+  }
+  
+  .img-5 {
+    grid-area: img-5;
+    background-image: url(aboutImages/img5.jpg);
+  }
+  
+  .profile-image {
+    /* width: 60%; */
+    height: 600px;
+    /* margin-top: 50px;
+    padding-top: 50px;
+    margin-bottom:200px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+      "img-1 img-1 img-4 img-3"
+      "img-1 img-1 img-2 img-5";
+  }
+  
+  .profile-image i{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-position: center;
+    z-index: 100;
+    padding: 1rem 3 rem;
+    border: 2px solid #eee;
+    border-radius: 0.4rem;
+    /*opacity: 0*/
+    transition: opacity 0.5s;
+  }
+  /* .about{
+    margin-top: 100px;
+  } */
+  
+  .about h1,
+  .contact h1{
+    color:#48CFAD;
+    font-size: 10rem;
+    z-index: 0;
+    opacity: 0.5;
+  }
+  
+  
+  .about-me-info{
+    /* max-width: 900px;
+    min-width:250px; */
+    /* background-color: #48CFAD; */
+    box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
+    padding: 80px;
+    position: center;
+    text-align:justify;
+    /* top: -70px;
+    left: 50%;
+    right: 50%; */
+    /* transform: translateX(-50%); */
+    /* z-index:1; */
+  }
+  
+  .about-me-info p{
+    font-size: calc(0.9rem + 1vh);
+    color:#707070;
+  }
+  
+  .about-me-info h2{
+    color:#48CFAD;
+    text-shadow: 1.5px 1.5px rgb(207, 206, 206);
+  }
+  
+  .about-me-info h3{
+    color: #8769D9;
+    text-shadow: 1.5px 1.5px rgb(207, 206, 206);
+  }
+  .about-me-info h4{
+    color:#707070;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    font-size: .8rem ;
+  }
+  .about-me-info h4 a{
+    text-decoration:none;
+    color:#48CFAD;
+    text-shadow: 1px 1px rgb(207, 206, 206);
+  }
+  
+  .about-me-info li a{
+    color:#707070;
+  }
+  
+  .about-me-info li a:hover{
+    color: #8769D9;
+  }
+  
+  .about-me-info p:nth-child(2),
+  .about-me-info p:last-child{
+    margin-top: 30px;
+  }
+  
+  /* .about img{
+    width: 300px;
+    position: relative;
+    top: -300px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+  } */
+  
+  
+  .contact{
+    display: flex;
+    /*puts the children in a column */
+    flex-direction: column; 
+    font-size: 1.4 rem;
+    color: #BEBEBE;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .ContactButtons{ 
+    padding-top: 50px;
+    display:flex;
+    flex-direction: row;
+    /* display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+      "github linkedin email"; */
+  }
+  
+  /* .github {
+    grid-area: github;
+  }
+  
+  .linkedin {
+    grid-area: linkedin;
+  }
+  
+  .email {
+    grid-area: email;
+  } */
+  
+  
+  
+  footer hr{
+    border: 2px solid #707070;
+    margin-top: 80px;
+  }
+  
+  footer p{
+    text-align: center;
+    color: #707070;
+    font-size: 1.2rem;
+    padding: 30px 0;
+  }
+  @media (max-width: 1500px){
+  .profile-image {
+      min-width:100%;
+      grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas:
+      "img-1 img-1 img-3"
+      "img-1 1mg-1 img-5";
+    }
+  }
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 27px;
+      padding-left: 25px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+    .about h1,
+    .contact h1{
+      font-size: 8rem;
+    }
+  
+    .contact-intro,
+    .about-me-info p{
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+      margin-right: 40px;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background:#8a8a8a;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    nav ul li a:hover, nav ul li a.active{
+      background: none;
+      color:#48CFAD;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    } 
+    .profile-image {
+      min-width:100%;
+      grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas:
+      "img-1 img-3"
+      "img-1 img-5";
+    }
+    .about h1,
+    .contact h1{
+      font-size: 6rem;
+    }
+    .contact-intro,
+    .about-me-info p{
+      font-size: 1.3rem;
+    }
+  
+  }
+  @media screen and (max-width: 800px) {
+  
+    .about h1,
+    .contact h1{
+      font-size: 4rem;
+    }
+    .contact-intro,
+    .about-me-info p{
+      font-size: 1.1rem;
+    }
+  
+    .container{
+      padding: 0 0 30px 30px;
+    }
+    .text{
+      justify-content:center;
+    }
+    
+    .text h1{
+      font-size: 2.2rem;
+    }
+    .text a{
+      text-align:center;
+      min-width:100%;
+    }
+  
+    .profile-image {
+      min-width:100%;
+      grid-template-columns: 1fr ;
+  
+    grid-template-areas:
+      "img-1"
+      "img-1";
+    }
+  
+    .ContactButtons{
+       flex-direction: column;
+      /* grid-template-columns: 1fr ;
+      grid-template-areas:
+        "github"
+        "linkedin"
+        "email "; */
+    }
+  
+  }
+  
