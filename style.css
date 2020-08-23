@@ -203,27 +203,27 @@
   
   .img-1 {
     grid-area: img-1;
-    background-image: url(aboutImages/img1.jpg);
+    background-image: url(main_images/img1.jpg);
   }
   
   .img-2 {
     grid-area: img-2;
-    background-image: url(aboutImages/img2.png);
+    background-image: url(main_images/img2.png);
   }
   
   .img-3 {
     grid-area: img-3;
-    background-image: url(aboutImages/img3.jpg);
+    background-image: url(main_images/img3.jpg);
   }
   
   .img-4 {
     grid-area: img-4;
-    background-image: url(aboutImages/img4.png);
+    background-image: url(main_images/img4.png);
   }
   
   .img-5 {
     grid-area: img-5;
-    background-image: url(aboutImages/img5.jpg);
+    background-image: url(main_images/img5.jpg);
   }
   
   .profile-image {
