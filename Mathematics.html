@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" />
+	<title>About</title>
+</head>
+
+<body>
+	<div class="container navbar">
+		<header>
+			<div class="lgo">
+				<h1>Laura<h1>
+			</div>
+			<nav>
+        <ul>
+          <li><a href="#about">about me</a></li>
+				  <li><a href="#skills">skills</a></li>
+				  <li><a href="#work">my work</a></li>
+        </ul>
+			</nav>
+		</header>
+	</div>
+
+	<div class="container main-info-section">
+		<div class="text">
+			<h1>
+				<span>H</span>
+        <span class="m-left">i</span>
+        <span class="m-left">,</span>
+        <br>
+        <span>I</span>
+        <span class="m-left">'</span>
+        <span class="m-left">m</span>
+        <span class="name">L</span>
+        <span class="m-left name">a</span>
+        <span class="m-left name">u</span>
+        <span class="m-left name">r</span>
+        <span class="m-left name">a</span>
+        <span class="m-left">,</span>
+        <br>
+        <span class="m-left">H</span>
+        <span class="m-left">e</span>
+        <span class="m-left">l</span>
+        <span class="m-left">l</span>
+        <span class="m-left">o</span>
+        <span class="m-left">W</span>
+        <span class="m-left">o</span>
+        <span class="m-left">r</span>
+        <span class="m-left">l</span>
+        <span class="m-left">d</span>
+        <span class="m-left">!</span>
+      </h1>
+      <p>Description of smth<p>
+      <a href="#contact">contact me</a>
+    </div>
+    <div class="profile-image">
+      <img src="img/profile-image.png" alt="">
+    </div>
+	</div>
+  
+  <div class= "container about" id= "about">
+    <h1>About Me</h1>
+    <div class = "about-me-info">
+      <p>I am a second-year Computer Science student at the university of Toronto. I am fascinated by this field because it can be so broad and specific at the same time. I am currently interested in Robotics, understanding math in a fun way, and using my skills to help others.
+      </p>
+      <p> Since the future is in unity and technology, it is important that Computer Science is diverse so that everyone can be represented and decisions are made holistically. With this notion in mind, I understand my responsibility as an engineer and it makes me excited to create projects and tools that will help many people! </p>
+      <p> I created this website to put a bit of myself on the web and to bring resources to others. I personally struggled during my first year of university, but the experience taught me that having the right mindset and others around makes a whole lot of a difference. 
+      </p>
+      <p>Have a great day and you got this!
+      </p>
+    </div>
+    <img src="img/dotted-shape.png" alt= "">
+  </div>
+  
+  <div class= "container skills" id="skills">
+    <h1>Skills</h1>
+    <p class = "skills-info">By spite about do of do allow blush. Additions in conveying or collected objection in. Suffer few desire wonder her object hardly nearer.</p>
+    <div class= "html">
+
+      <div class="tag-html">
+        <p>HTML</p>
+      </div>
+
+      <div class="progressbar">
+        <div class="bar-html"></div>
+      </div>
+    </div>
+    
+    <div class= "html">
+
+      <div class="tag-css">
+        <p>HTML</p>
+      </div>
+
+      <div class="progressbar">
+        <div class="bar-css"></div>
+      </div>
+
+    </div>
+
+    <div class= "html">
+      
+      <div class="tag-javascript">
+        <p>HTML</p>
+      </div>
+      <div class="progressbar">
+        <div class="bar-javascript"></div>
+      </div>
+    </div>
+
+    <div class= "html">
+
+      <div class="tag-react">
+        <p>HTML</p>
+      </div>
+
+      <div class="progressbar">
+        <div class="bar-react"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container work" id="work">
+    <h1>Work</h1>
+    <div class = "work-category">
+      <button id="designing" class="active" onclick = "showRequiredCategory(this)">Web design</button>
+      <button id="animation" onclick = "showRequiredCategory(this)">Web animation</button>
+      <button id="project" onclick = "showRequiredCategory(this)"> React projects</button>
+    </div>
+    <div class="category-designing showCategory">
+      <a href=""><img src="img/1.png"></a>
+      <a href=""><img src="img/2.png"></a>
+      <a href=""><img src="img/3.png"></a>
+      <a href=""><img src="img/2.png"></a>
+      <a href=""><img src="img/3.png"></a>
+    </div>
+
+    <div class="category-animation hideCategory">
+      <a href=""><img src="img/1.png"></a>
+      <a href=""><img src="img/2.png"></a>
+      <a href=""><img src="img/3.png"></a>
+    </div>
+
+    <div class="category-project hideCategory">
+      <a href=""><img src="img/1.png"></a>
+      <a href=""><img src="img/2.png"></a>
+      <a href=""><img src="img/3.png"></a>
+      <a href=""><img src="img/2.png"></a>
+    </div>
+  </div>
+
+  <div class="container contact" id="contact">
+    <h1>Contact</h1>
+    <form>
+      <input type="text" name="name" placeholder="Full Name">
+      <input type="email" placeholder= "Email">
+      <input type="email" placeholder= "PortfolioPersonemail@example.com" disabled>
+      <textarea name= "message" cols ="30" rows="10" placeholder="Message"></textarea>
+      <input type="submit">
+    </form>
+  </div>
+
+  <footer>
+    <hr>
+    <p>2020 Copyright. All rights reserved</p>
+  </footer>
+
+
+
+	<script src="js/ScrollMagic.min.js">
+	</script>
+	<script src="js/animation.gsap.min.js">
+	</script>
+	<script src="js/TimelineLite.min.js">
+	</script>
+	<script src="js/TweenMax.min.js">
+	</script>
+	<script src="js/CSSPlugin.min.js">
+	</script>
+	<script src="js/script.js">
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- the tab bar.. kinda broken :)
+<div class="container">
+		<div class="nav-wrapper">
+			<div class="left-side">
+				<div class="nav-link-wrapper"> <a href="index.html">Home</a></div>
+				<div class="nav-link-wrapper active-nav-link"><a href="AboutMe.html">About</a>
+				<div class="nav-link-wrapper"> <a href="ComputerScience.html">Computer Science</a></div>
+				<div class="nav-link-wrapper"> <a href="Mathematics.html">Mathematics</a></div>
+				<div class="nav-link-wrapper"> <a href="Robotics.html">Robotics</a></div>
+				<div class="nav-link-wrapper"> <a href="Projects.html">Projects</a></div>
+				<div class="nav-link-wrapper"> <a href="ContactMe.html">Contact</a></div>
+			</div>
+
+			<div class="right-side">
+				<div>LAURA C MADRID</div>
+			</div>
+		</div>
+    </div>
+    -->
